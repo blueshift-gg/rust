@@ -72,10 +72,10 @@
 #
 # Note that many of the LLVM options are not currently supported for
 # downloading. Currently only the "assertions" option can be toggled.
-#llvm.download-ci-llvm = true
+llvm.download-ci-llvm = false
 
 # Indicates whether the LLVM build is a Release or Debug build
-#llvm.optimize = true
+llvm.optimize = true
 
 # Indicates whether LLVM should be built with ThinLTO. Note that this will
 # only succeed if you use clang, lld, llvm-ar, and llvm-ranlib in your C/C++
@@ -118,7 +118,7 @@
 #llvm.libzstd = false
 
 # Whether to use Ninja to build LLVM. This runs much faster than make.
-#llvm.ninja = true
+llvm.ninja = true
 
 # LLVM targets to build support for.
 # Note: this is NOT related to Rust compilation targets. However, as Rust is
