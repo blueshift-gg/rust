@@ -506,6 +506,11 @@ mod c {
         if target.arch == "loongarch64" {
             sources.extend(&[("__fe_getround", "fp_mode.c")]);
         }
+        
+        if target.arch =="bpf" {
+            sources.extend(&[("__multi3", "multi3.c")]);
+            cfg.flag("-emit-llvm");
+        }
 
         // Remove the assembly implementations that won't compile for the target
         if llvm_target[0] == "thumbv6m" || llvm_target[0] == "thumbv8m.base" || target.os == "uefi"

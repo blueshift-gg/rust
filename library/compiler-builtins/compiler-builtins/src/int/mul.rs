@@ -105,6 +105,7 @@ intrinsics! {
         a.mul(b)
     }
 
+    #[cfg(not(target_arch = "bpf"))]
     pub extern "C" fn __multi3(a: i128, b: i128) -> i128 {
         a.mul(b)
     }
